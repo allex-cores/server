@@ -1,0 +1,35 @@
+{
+  "name": "allex_servercore",
+  "version": "1.0.0",
+  "description": "AllexJS Server Core",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allex-cores/server.git"
+  },
+  "dependencies": {
+    "allex_clientcore": "1.x",
+    "allex_callableservercorelib": "1.x",
+    "allex_serverservercorelib": "1.x",
+    "allex_servicepackservercorelib": "2.x",
+    "allex_sessionintroductorservercorelib": "1.x",
+    "allex_transportservercorelib": "1.x",
+    "allex_npminstallserverruntimelib": "1.x",
+    "allex_portofficeserverruntimelib": "1.x",
+    "allex_temppipedirserverruntimelib": "1.x"
+  },
+  "keywords": [
+    "ecosystem:AllexJS",
+    "server",
+    "core"
+  ],
+  "author": "Andrija Petrovic <andrija.hers@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/allex-cores/server/issues"
+  },
+  "homepage": "https://github.com/allex-cores/server#readme"
+}
