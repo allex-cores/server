@@ -1,4 +1,4 @@
-var http = require('http');
+var http = require('http'),
   execlib = null;
 function functionRegistrator(func){
   return function(){

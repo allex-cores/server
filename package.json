@@ -1,6 +1,6 @@
 {
   "name": "allex_servercore",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "AllexJS Server Core",
   "main": "index.js",
   "scripts": {
