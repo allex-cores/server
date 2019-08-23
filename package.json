@@ -1,6 +1,6 @@
 {
   "name": "allex_servercore",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "AllexJS Server Core",
   "main": "index.js",
   "scripts": {
@@ -18,7 +18,7 @@
     "allex_sessionintroductorservercorelib": "1.x",
     "allex_transportservercorelib": "1.x",
     "allex_npminstallserverruntimelib": "2.x",
-    "allex_portofficeserverruntimelib": "1.x",
+    "allex_portofficeserverruntimelib": "2.x",
     "allex_temppipedirserverruntimelib": "1.x"
   },
   "keywords": [
