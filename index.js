@@ -5,16 +5,6 @@ function functionRegistrator(func){
     return func;
   };
 }
-function sendHTTPRequest (page,obj) {
-  http.request({
-    host:this.host,
-    port:this.port,
-    path:page+this.queryize(obj)
-  },this.onResponse.bind(this,page))
-    .on('error',this.onError.bind(this,page,obj))
-    .end();
-}; 
-
 function createExecSuite(lib){
   'use strict';
   if(execlib){
@@ -25,14 +15,14 @@ function createExecSuite(lib){
     TalkerFactory = require('allex_transportservercorelib')(lib),
     tmpPipeDir = require('allex_temppipedirserverruntimelib'),
     portSuite = require('allex_portofficeserverruntimelib')(lib);
-  TalkerFactory.prototype.HttpTalker.sendRequest = sendHTTPRequest;
   //require('./transport/http/sendrequestcreator')(TalkerFactory.prototype.HttpTalker);
   require('allex_clientcore')(execlib,TalkerFactory);
   execlib.execSuite.Callable = Callable;
   //require('./transport/portsniffer')(execlib);
   var SessionIntroductor = require('allex_sessionintroductorservercorelib')(lib);
   var servicepacklib = require('allex_servicepackservercorelib')(execlib, SessionIntroductor),
-      Server = require('allex_serverservercorelib')(execlib, SessionIntroductor)
+      signalrlib = require('allex_signalrservercorelib')(execlib),
+      Server = require('allex_serverservercorelib')(execlib, signalrlib, SessionIntroductor)
       ;
 
   execlib.execSuite.userSessionFactoryCreator = servicepacklib.userSessionFactoryCreator;
@@ -61,6 +51,11 @@ function createExecSuite(lib){
     return Server.start.apply(Server,arguments);
   };
   execlib.execSuite.lanManagerPorts = [{
+    protocol:{
+      name: 'http'
+    },
+    port: 22451
+  },{
     protocol:{
       name: 'ws'
     },
