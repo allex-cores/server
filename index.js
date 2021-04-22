@@ -12,7 +12,7 @@ function createExecSuite(lib){
   }
   execlib = {lib:lib};
   var Callable = require('allex_callableservercorelib')(lib),
-    TalkerFactory = require('allex_transportservercorelib')(lib),
+    TalkerFactory = require('allex_transportservercorelib')(lib, require('@microsoft/signalr')),
     tmpPipeDir = require('allex_temppipedirserverruntimelib'),
     portSuite = require('allex_portofficeserverruntimelib')(lib);
   //require('./transport/http/sendrequestcreator')(TalkerFactory.prototype.HttpTalker);

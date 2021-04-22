@@ -11,16 +11,17 @@
     "url": "git+https://github.com/allex-cores/server.git"
   },
   "dependencies": {
-    "allex_clientcore": "1.x",
+    "allex_clientcore": "2.x",
     "allex_callableservercorelib": "1.x",
-    "allex_serverservercorelib": "1.x",
-    "allex_servicepackservercorelib": "2.x",
+    "allex_serverservercorelib": "2.x",
+    "allex_servicepackservercorelib": "3.x",
     "allex_sessionintroductorservercorelib": "1.x",
-    "allex_transportservercorelib": "1.x",
+    "allex_transportservercorelib": "2.x",
     "allex_signalrservercorelib": "1.x",
     "allex_npminstallserverruntimelib": "2.x",
     "allex_portofficeserverruntimelib": "2.x",
-    "allex_temppipedirserverruntimelib": "1.x"
+    "allex_temppipedirserverruntimelib": "1.x",
+    "@microsoft/signalr": "5.x"
   },
   "keywords": [
     "ecosystem:AllexJS",
