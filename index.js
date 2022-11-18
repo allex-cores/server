@@ -10,6 +10,7 @@ function createExecSuite(lib){
   if(execlib){
     return execlib;
   }
+  require('./libshimmer')(lib);
   execlib = {lib:lib};
   var Callable = require('allex_callableservercorelib')(lib),
     TalkerFactory = require('allex_transportservercorelib')(lib, require('@microsoft/signalr')),

@@ -1,6 +1,6 @@
 {
   "name": "allex_servercore",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "AllexJS Server Core",
   "main": "index.js",
   "scripts": {
@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "allex_clientcore": "2.x",
+    "allex_macaddresslowlevellib": "1.x",
     "allex_callableservercorelib": "1.x",
     "allex_serverservercorelib": "2.x",
     "allex_servicepackservercorelib": "3.x",
@@ -21,7 +22,7 @@
     "allex_npminstallserverruntimelib": "2.x",
     "allex_portofficeserverruntimelib": "2.x",
     "allex_temppipedirserverruntimelib": "1.x",
-    "@microsoft/signalr": "5.x"
+    "@microsoft/signalr": "7.x"
   },
   "keywords": [
     "ecosystem:AllexJS",
